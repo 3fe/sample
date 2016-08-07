@@ -1,0 +1,23 @@
+main {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#title {
+    border: solid aqua 2px;
+    border-color: aqua;
+    position: relative;
+    /*top: 20px;*/
+    right: 50px;
+    left: 50px
+}
+
+#code {
+    position: relative;
+
+}
+
+#code span:first-child {
+    display: block;
+}

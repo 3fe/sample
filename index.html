@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello HTML</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+<main>
+    <div id="title">
+        一些小示例
+    </div>
+    <div id="code">
+        <button onclick="time(this)">
+            <span>验证码</span>
+            <span id="sec">60s</span>
+        </button>
+    </div>
+</main>
+<script>
+    var t = 60;
+    function time(o) {
+        var sec = document.getElementById("sec");
+        if (t == 0) {
+            o.removeAttribute("disabled");
+            sec.innerText = "重新发送";
+            t = 60;
+        } else {
+            t--;
+            o.setAttribute("disabled", true);
+            sec.innerText = t + 's';
+            setTimeout(function () {
+                time(o);
+
+            }, 1000);
+        }
+    }
+</script>
+</body>
+</html>
